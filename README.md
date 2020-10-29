@@ -17,3 +17,6 @@
 - git remote add origin https://github.com/nguyennguyenloc/Social.git
 - git remote show origin
 - git push -u origin main
+
+### Lession10
+- tsc --init
