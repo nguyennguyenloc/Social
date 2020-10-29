@@ -1,0 +1,8 @@
+{
+  "name": "social",
+  "version": "1.0.0",
+  "description": "A mini Social network Loc community",
+  "main": "src/server.ts",
+  "author": "Nguyen Loc",
+  "license": "MIT"
+}
