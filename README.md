@@ -20,3 +20,16 @@
 
 ### Lession10
 - tsc --init
+- yarn add express
+- src/server.ts: 
+    + import express from 'express';
+- yarn add @types/express --dev
+- Readme: "scripts":{
+            "server":""
+            }
+- yarn add typescript nodemon ts-node --dev
+- Readme: "scripts": {
+            "server": "nodemon src/server.ts"
+            }
+- yarn server
+ 
