@@ -33,3 +33,9 @@
             }
 - yarn server
  
+ ### Lession13
+- yarn add mongoose
+- yarn add @types/mongoose --dev
+ ### Lession14
+ - yarn add dotenv
+ - yarn add cross-env --dev

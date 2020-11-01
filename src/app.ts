@@ -1,6 +1,7 @@
 import express from 'express';
 import { Route } from './core/interfaces';
 
+import mongoose from 'mongoose';
 class App {
     public app: express.Application;
     public port: string | number;
@@ -10,6 +11,7 @@ class App {
         this.port = process.env.PORT || 5000;
 
         this.initializeRoutes(routes);
+        this.connectToDatabase();
     }
 
     public listen() {
@@ -22,6 +24,25 @@ class App {
         routes.forEach((route) => {
             this.app.use('/', route.router);
         });
+    }
+
+    private connectToDatabase() {
+        try {
+            const connectString = process.env.MONGODB_URI;
+            if (!connectString) {
+                console.log("Connection string is invalid");
+                return;
+            }
+            mongoose.connect(connectString, {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+                useFindAndModify: false,
+                useCreateIndex: true
+            });
+            console.log('Database connected...')
+        } catch (error) {
+            console.log("Connect to database error")
+        }
     }
 }
 
