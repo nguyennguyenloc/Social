@@ -39,3 +39,8 @@
  ### Lession14
  - yarn add dotenv
  - yarn add cross-env --dev
+
+ ### Lessin15
+ - yarn add hpp helmet morgan cors
+ - private initializeMiddlewares
+ - yarn add @types/cors @types/morgan @types/helmet --dev
